@@ -1,1 +1,1 @@
-mariadb-check --databases databasename
+mariadb-check --databases zabbix --optimize --verbose > /root/resultado.log
