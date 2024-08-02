@@ -2,14 +2,14 @@
 SHOW VARIABLES LIKE 'innodb_buffer_pool_size';
 SHOW VARIABLES LIKE 'innodb_log_file_size';
 
--- Exibbir em MB:
+-- Exibir em MB:
 SELECT 
   VARIABLE_NAME, 
   VARIABLE_VALUE / (1024 * 1024) AS VALUE_IN_MB
 FROM 
   information_schema.GLOBAL_VARIABLES
 WHERE 
-  VARIABLE_NAME IN ('innodb_buffer_pool_size', 'innodb_log_file_size');
+  VARIABLE_NAME IN ('innodb_buffer_pool_size', 'innodb_log_file_size', 'query_cache_size');
 
 -- O procedimento é similar ao anterior, edite o my.cnf
 [mysqld]
