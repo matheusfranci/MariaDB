@@ -14,7 +14,7 @@ WHERE
 -- O procedimento é similar ao anterior, edite o my.cnf
 [mysqld]
 innodb_buffer_pool_size = 2G
-innodb_log_file_size = 256M
+innodb_log_file_size = 128M
 
 -- Reinicie o mariadb
 sudo systemctl restart mariadb
